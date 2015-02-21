@@ -1,0 +1,11 @@
+# (C) 2015 Cybozu.  All rights reserved.
+
+ngx_addon_name="ngx_http_maxconn"
+
+CORE_INCS="$CORE_INCS $ngx_addon_dir"
+
+HTTP_MODULES="$HTTP_MODULES ngx_http_maxconn_module"
+
+NGX_ADDON_SRCS="$NGX_ADDON_SRCS $ngx_addon_dir/ngx_event_maxconn.c $ngx_addon_dir/ngx_http_maxconn.c"
+
+# vim: ft=sh

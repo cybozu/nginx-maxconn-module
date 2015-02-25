@@ -1,12 +1,18 @@
 nginx-maxconn-module
 ====================
 
-The `nginx-maxconn-module` is used to limit the number of simultaneous requests per defined key.
+`nginx-maxconn-module` provides directives to limit the number of simultaneous requests per user-defined key.
 
 This module uses [counter extension](https://github.com/cybozu/yrmcds/blob/master/docs/counter.md) of [yrmcds](https://github.com/cybozu/yrmcds) to count requests.  External counting server enables us to count the requests consistently even if there are multiple nginx servers across multiple hosts.
 
 
-Example Configuration
+Differences from limit_req
+--------------------------
+
+See [#1](https://github.com/cybozu/nginx-maxconn-module/issues/1).
+
+
+Example configuration
 ---------------------
 
 ```
@@ -91,4 +97,4 @@ make install
 License
 -------
 
-2-clause BSD-like license.
+[The BSD 2-Clause License](LICENSE).
